@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Arctive Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.services-full { display: flex; flex-direction: column; gap: 5rem; }
+.service-block {
+  display: grid; grid-template-columns: 1fr 1.6fr;
+  gap: 4rem; align-items: start;
+  padding-bottom: 5rem;
+  border-bottom: 0.5px solid rgba(0,200,240,0.08);
+}
+.service-block:last-child { border-bottom: none; padding-bottom: 0; }
+@media (max-width: 900px) { .service-block { grid-template-columns: 1fr; gap: 2rem; } }
+.service-meta { position: sticky; top: 7rem; }
+.service-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 4.5rem; font-weight: 800;
+  color: rgba(0,200,240,0.12);
+  line-height: 1; margin-bottom: 0.75rem;
+  letter-spacing: -0.04em;
+}
+.service-meta h2 { font-size: 1.7rem; margin-bottom: 1rem; }
+.service-meta .lead {
+  font-size: 0.95rem; color: var(--text-secondary);
+  font-weight: 300; line-height: 1.8; margin-bottom: 1.5rem;
+}
+.deliverables { display: flex; flex-direction: column; gap: 0.85rem; }
+.deliverable {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  font-size: 0.875rem; color: var(--text-secondary); font-weight: 300;
+}
+.deliverable::before {
+  content: '';
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--electric); flex-shrink: 0; margin-top: 8px;
+}
+.detail-cards { display: flex; flex-direction: column; gap: 1rem; }
+.detail-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.25s;
+}
+.detail-card:hover { border-color: rgba(0,200,240,0.35); }
+.detail-card h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem;
+}
+.detail-card p { font-size: 0.875rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Arctive<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html" class="active">Services</a></li>
+    <li><a href="../about/index.html">About</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+  </ul>
+  <a href="../contact/index.html" class="nav-cta">Get in Touch</a>
+</nav>
+
+<div class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="orb" style="right:-5%;top:0;width:600px;height:600px;"></div>
+  <div style="position:relative;z-index:1;">
+    <p class="section-label">What We Offer</p>
+    <h1 style="max-width:680px;">Six practice areas.<br><span class="accent">One trusted partner.</span></h1>
+  </div>
+</div>
+
+<section>
+  <div class="services-full">
+
+    <!-- 01 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">01</div>
+        <h2>AI & Technology Strategy</h2>
+        <p class="lead">We help federal departments navigate the rapidly evolving technology landscape — building strategies that are realistic, compliant, and positioned to deliver lasting value.</p>
+        <div class="deliverables">
+          <div class="deliverable">Enterprise AI readiness assessments</div>
+          <div class="deliverable">Digital transformation roadmaps</div>
+          <div class="deliverable">Technology investment frameworks</div>
+          <div class="deliverable">Data strategy and governance plans</div>
+          <div class="deliverable">GC AI Strategy 2025–2027 alignment</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>AI Readiness & Adoption</h4><p>Structured assessments of organizational capacity, data maturity, and infrastructure readiness — with a prioritized, phased adoption plan tailored to your department's mandate and risk tolerance.</p></div>
+        <div class="detail-card"><h4>Digital Transformation Strategy</h4><p>Comprehensive modernization strategies that map current-state processes to a future-state vision, with clear milestones, governance structures, and change enablement built in.</p></div>
+        <div class="detail-card"><h4>Technology Investment Planning</h4><p>Business cases, options analyses, and investment frameworks that meet Treasury Board requirements and position technology decisions for approval and long-term sustainability.</p></div>
+        <div class="detail-card"><h4>Data & Information Governance</h4><p>Policies, frameworks, and implementation guides for managing government data — covering classification, access, retention, and compliance with the Privacy Act and related legislation.</p></div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">02</div>
+        <h2>Policy & Research</h2>
+        <p class="lead">From rapid environmental scans to comprehensive policy frameworks, we produce the research and analysis that informs sound decisions at every level of government.</p>
+        <div class="deliverables">
+          <div class="deliverable">Policy frameworks and options papers</div>
+          <div class="deliverable">Environmental scans and literature reviews</div>
+          <div class="deliverable">Regulatory impact analysis</div>
+          <div class="deliverable">Executive briefing notes</div>
+          <div class="deliverable">Consultation summaries and reports</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>Policy Development</h4><p>End-to-end policy work — from problem definition and options analysis to drafting, stakeholder review, and final policy instrument. Written to GC style and Treasury Board standards.</p></div>
+        <div class="detail-card"><h4>Research & Environmental Scans</h4><p>Rapid, rigorous scans of the academic literature, grey literature, and comparable jurisdictions — synthesized into actionable insights that inform strategy and program design.</p></div>
+        <div class="detail-card"><h4>Briefings & Decision Support</h4><p>Concise, accurate briefing notes, memoranda to Cabinet, and decision memos written for senior audiences — clear on the issue, clear on the recommendation.</p></div>
+        <div class="detail-card"><h4>Evaluation & Performance Measurement</h4><p>Performance measurement frameworks, logic models, and program evaluation plans built to Treasury Board's Policy on Results — measuring what matters.</p></div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">03</div>
+        <h2>IT Consulting</h2>
+        <p class="lead">Technical advisory grounded in how the federal government actually operates — from procurement vehicles like TBIPS and SBIPS to enterprise architecture and project delivery.</p>
+        <div class="deliverables">
+          <div class="deliverable">TBIPS and SBIPS task delivery</div>
+          <div class="deliverable">Systems and information architecture</div>
+          <div class="deliverable">IT project advisory and oversight</div>
+          <div class="deliverable">Security and compliance reviews</div>
+          <div class="deliverable">Vendor and contract management support</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>Systems Architecture & Analysis</h4><p>Current-state documentation, gap analysis, and target-state architecture design — structured to support informed investment decisions and smooth implementation.</p></div>
+        <div class="detail-card"><h4>IT Project Advisory</h4><p>Independent project assurance, schedule and risk reviews, and governance support for major IT initiatives — keeping complex projects on track and defensible.</p></div>
+        <div class="detail-card"><h4>Security & Compliance</h4><p>Privacy impact assessments, threat and risk analysis, and security control reviews aligned to GC security policy — protecting information and enabling audit-ready operations.</p></div>
+        <div class="detail-card"><h4>Procurement & Vendor Support</h4><p>Statement of work development, evaluation framework design, and vendor performance management to ensure government gets full value from its technology investments.</p></div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">04</div>
+        <h2>Learning & Development</h2>
+        <p class="lead">We design and build learning programs that transfer knowledge, build competency, and stick — using proven instructional design methodologies adapted to federal contexts.</p>
+        <div class="deliverables">
+          <div class="deliverable">Training needs assessments</div>
+          <div class="deliverable">Curriculum and course design</div>
+          <div class="deliverable">E-learning and SCORM content</div>
+          <div class="deliverable">Facilitator and participant guides</div>
+          <div class="deliverable">Learning evaluation frameworks</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>Training Needs Assessment</h4><p>Structured gap analysis between current and required competencies — identifying priority learning areas, target audiences, and the right delivery modalities for your workforce.</p></div>
+        <div class="detail-card"><h4>Curriculum & Instructional Design</h4><p>Full course design from learning objectives through assessment — using ADDIE, SAM, and other recognized frameworks to build programs that achieve measurable outcomes.</p></div>
+        <div class="detail-card"><h4>E-Learning Development</h4><p>Interactive, SCORM-compliant digital learning content designed for government LMS environments — engaging, accessible, and built to WCAG 2.1 standards.</p></div>
+        <div class="detail-card"><h4>Facilitation Materials</h4><p>Comprehensive facilitator guides, participant workbooks, job aids, and reference materials that support consistent, high-quality program delivery across your organization.</p></div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">05</div>
+        <h2>Strategic Communications</h2>
+        <p class="lead">Communications that inform, engage, and build trust — from internal change communications to public-facing program content, all written in plain language that works.</p>
+        <div class="deliverables">
+          <div class="deliverable">Integrated communications plans</div>
+          <div class="deliverable">Plain language writing and editing</div>
+          <div class="deliverable">Stakeholder engagement strategies</div>
+          <div class="deliverable">Web and digital content</div>
+          <div class="deliverable">Annual and program reports</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>Integrated Communications Planning</h4><p>Strategic communications plans that identify audiences, key messages, channels, and timing — coordinated to support program launches, policy changes, and organizational transformation.</p></div>
+        <div class="detail-card"><h4>Plain Language Writing</h4><p>Complex government content translated into clear, accessible language — for web, publications, correspondence, and public materials. Written to GC plain language standards.</p></div>
+        <div class="detail-card"><h4>Stakeholder Engagement</h4><p>Engagement frameworks, consultation design, and facilitation materials that create meaningful dialogue with partners, Indigenous groups, industry, and the public.</p></div>
+        <div class="detail-card"><h4>Program & Annual Reports</h4><p>Results reports, departmental plans, and public reporting documents that clearly communicate program performance against commitments — accurate, readable, and publication-ready.</p></div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="service-block">
+      <div class="service-meta">
+        <div class="service-num">06</div>
+        <h2>Management Consulting</h2>
+        <p class="lead">Organizational and operational advisory that helps departments work better — from strategic planning to restructuring, change management to program renewal.</p>
+        <div class="deliverables">
+          <div class="deliverable">Organizational reviews and design</div>
+          <div class="deliverable">Business process improvement</div>
+          <div class="deliverable">Change management planning</div>
+          <div class="deliverable">Strategic planning facilitation</div>
+          <div class="deliverable">Program and service review</div>
+        </div>
+      </div>
+      <div class="detail-cards">
+        <div class="detail-card"><h4>Organizational Review & Design</h4><p>Functional reviews, span-of-control analysis, and organizational redesign recommendations that improve efficiency, accountability, and alignment to strategic priorities.</p></div>
+        <div class="detail-card"><h4>Business Process Improvement</h4><p>Current-state process mapping, bottleneck analysis, and future-state design — with implementation support to ensure changes take hold and deliver the expected efficiencies.</p></div>
+        <div class="detail-card"><h4>Change Management</h4><p>Structured change management plans aligned to Prosci or GC frameworks — stakeholder impact analysis, readiness assessments, and communications to support successful transitions.</p></div>
+        <div class="detail-card"><h4>Strategic Planning</h4><p>Facilitated strategic planning processes that produce clear, actionable departmental or branch plans — with logic models, priorities, and accountability structures built in.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,var(--navy-mid),var(--navy-light));border-top:0.5px solid rgba(0,200,240,0.12);text-align:center;">
+  <p class="section-label">Next Steps</p>
+  <h2>Tell us about your engagement.</h2>
+  <p style="color:var(--text-secondary);font-size:1.05rem;font-weight:300;max-width:500px;margin:0 auto 2.5rem;line-height:1.8;">We're ready to discuss your requirements, respond to your RFP, or simply explore how we can help.</p>
+  <a href="../contact/index.html" class="btn-primary">Contact Arctive</a>
+</section>
+
+<footer>
+  <a href="../index.html" class="logo">Arctive<span>.</span></a>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Services</a>
+    <a href="../about/index.html">About</a>
+    <a href="../contact/index.html">Contact</a>
+  </div>
+  <span class="footer-legal">© 2026 Arctive Consulting Inc. Hamilton, Ontario, Canada</span>
+</footer>
+</body>
+</html>
