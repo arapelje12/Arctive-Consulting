@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arctive Consulting | Public Sector Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 0 5rem;
+  position: relative; overflow: hidden;
+}
+.hero-content { position: relative; z-index: 1; max-width: 740px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--electric-dim);
+  border: 1px solid var(--card-border);
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  font-size: 0.78rem; color: var(--electric);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--electric);
+  animation: pulse 2.2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.45; transform:scale(0.8); }
+}
+.hero-sub {
+  font-size: 1.15rem; color: var(--text-secondary);
+  max-width: 540px; font-weight: 300; line-height: 1.8;
+  margin-bottom: 2.75rem;
+}
+.hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.hero-actions .btn-ghost {
+  color: var(--text-secondary); font-size: 0.95rem;
+  text-decoration: none; transition: color 0.2s; padding: 0.85rem 1.25rem;
+}
+.hero-actions .btn-ghost:hover { color: var(--white); }
+
+/* credentials strip */
+.cred-strip {
+  padding: 2.25rem 5rem;
+  display: flex; align-items: center; gap: 3.5rem; flex-wrap: wrap;
+  border-top: 0.5px solid rgba(0,200,240,0.09);
+  border-bottom: 0.5px solid rgba(0,200,240,0.09);
+  background: rgba(255,255,255,0.018);
+}
+.cred-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+.creds { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.cred {
+  font-size: 0.82rem; color: var(--text-secondary); font-weight: 400;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.cred::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--electric); flex-shrink: 0; }
+
+/* services preview */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 700px)  { .services-grid { grid-template-columns: 1fr; } }
+
+/* outcomes section */
+.outcomes-wrap {
+  display: grid; grid-template-columns: 1fr 1.1fr;
+  gap: 5rem; align-items: center;
+}
+@media (max-width: 900px) { .outcomes-wrap { grid-template-columns: 1fr; } }
+.outcome-list { display: flex; flex-direction: column; gap: 1.75rem; }
+.outcome-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+.outcome-item h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem;
+}
+.outcome-item p { font-size: 0.875rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; }
+
+/* sectors */
+.sectors-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+  gap: 1rem; margin-top: 3.5rem;
+}
+.sector-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.25rem;
+  text-align: center;
+  transition: all 0.25s;
+}
+.sector-card:hover { border-color: rgba(0,200,240,0.38); background: var(--electric-dim); }
+.sector-card .si { font-size: 1.6rem; display: block; margin-bottom: 0.65rem; }
+.sector-card h4 { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 600; line-height: 1.4; }
+
+/* cta band */
+.cta-band {
+  background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
+  border-top: 0.5px solid rgba(0,200,240,0.12);
+  border-bottom: 0.5px solid rgba(0,200,240,0.12);
+  text-align: center;
+  padding: 6rem 5rem;
+}
+.cta-band h2 { margin-bottom: 1rem; }
+.cta-band p { color: var(--text-secondary); font-size: 1.05rem; font-weight: 300; max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8; }
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Arctive<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services/index.html">Services</a></li>
+    <li><a href="about/index.html">About</a></li>
+    <li><a href="contact/index.html">Contact</a></li>
+  </ul>
+  <a href="contact/index.html" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="orb" style="right:-8%;top:5%;width:680px;height:680px;"></div>
+  <div class="orb" style="left:-6%;bottom:-15%;width:480px;height:480px;background:radial-gradient(circle,rgba(0,80,180,0.1) 0%,transparent 70%);"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-up"><div class="badge-dot"></div>Canadian Public Sector Advisory</div>
+    <h1 class="fade-up-2">
+      Expertise that moves
+      <span class="accent">government forward.</span>
+    </h1>
+    <p class="hero-sub fade-up-3">
+      Arctive Consulting delivers high-impact advisory, policy, technology, and communications solutions to federal departments and agencies — with a proven record of outcomes that matter.
+    </p>
+    <div class="hero-actions fade-up-3">
+      <a href="services/index.html" class="btn-primary">Our Services</a>
+      <a href="contact/index.html" class="btn-ghost">Work With Us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS STRIP -->
+<div class="cred-strip">
+  <span class="cred-label">Recognised Supplier</span>
+  <div class="creds">
+    <span class="cred">TBIPS / SBIPS Registered</span>
+    <span class="cred">ProServices Qualified</span>
+    <span class="cred">Reliability Status Eligible</span>
+    <span class="cred">Buy Canadian Compliant</span>
+    <span class="cred">SAP Ariba / CanadaBuys Listed</span>
+  </div>
+</div>
+
+<!-- SERVICES PREVIEW -->
+<section>
+  <p class="section-label">Core Capabilities</p>
+  <h2>What we deliver.</h2>
+  <p class="section-intro">Six integrated practice areas — each staffed by specialists who understand the complexity of federal mandates and how to meet them.</p>
+  <div class="services-grid">
+    <div class="card">
+      <div class="icon-box">🤖</div>
+      <h3>AI & Technology Strategy</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Enterprise AI roadmaps, digital transformation strategies, and technology assessments aligned to GC priorities.</p>
+      <div class="tags"><span class="tag">AI Strategy</span><span class="tag">Digital Transformation</span><span class="tag">Technology Assessments</span></div>
+    </div>
+    <div class="card">
+      <div class="icon-box">📋</div>
+      <h3>Policy & Research</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Evidence-based policy development, environmental scans, regulatory analysis, and executive briefings.</p>
+      <div class="tags"><span class="tag">Policy Development</span><span class="tag">Research & Analysis</span><span class="tag">Briefing Notes</span></div>
+    </div>
+    <div class="card">
+      <div class="icon-box">💻</div>
+      <h3>IT Consulting</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Systems analysis, information architecture, data governance, and IT project advisory for federal departments.</p>
+      <div class="tags"><span class="tag">TBIPS/SBIPS</span><span class="tag">Systems Analysis</span><span class="tag">Data Governance</span></div>
+    </div>
+    <div class="card">
+      <div class="icon-box">🎓</div>
+      <h3>Learning & Development</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Curriculum design, e-learning, instructional design, and training programs built to adult learning frameworks.</p>
+      <div class="tags"><span class="tag">Curriculum Design</span><span class="tag">E-Learning</span><span class="tag">Training Assessment</span></div>
+    </div>
+    <div class="card">
+      <div class="icon-box">📢</div>
+      <h3>Strategic Communications</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Communications plans, plain language writing, stakeholder engagement, and public-facing program content.</p>
+      <div class="tags"><span class="tag">Comms Plans</span><span class="tag">Plain Language</span><span class="tag">Stakeholder Engagement</span></div>
+    </div>
+    <div class="card">
+      <div class="icon-box">⚙️</div>
+      <h3>Management Consulting</h3>
+      <p style="font-size:.9rem;color:var(--text-secondary);font-weight:300;line-height:1.7;">Organizational reviews, process improvement, change management, and performance measurement frameworks.</p>
+      <div class="tags"><span class="tag">Org Reviews</span><span class="tag">Process Improvement</span><span class="tag">Change Management</span></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="services/index.html" class="btn-outline">View All Services</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OUTCOMES -->
+<section>
+  <div class="outcomes-wrap">
+    <div>
+      <p class="section-label">Why Arctive</p>
+      <h2>Grounded in experience.<br>Defined by results.</h2>
+      <p style="font-size:1rem;color:var(--text-secondary);font-weight:300;line-height:1.85;margin-bottom:2.5rem;">We bring deep familiarity with how the federal government works — its procurement structures, policy frameworks, and operational realities — and we channel that knowledge into deliverables that hold up under scrutiny.</p>
+      <a href="about/index.html" class="btn-outline">About Arctive</a>
+    </div>
+    <div class="outcome-list">
+      <div class="outcome-item">
+        <div class="icon-box" style="margin-bottom:0;">🎯</div>
+        <div>
+          <h4>On-scope, on-time delivery</h4>
+          <p>Every engagement is managed to a clear scope and schedule. Clients receive exactly what they asked for — precise, complete, and ready to use.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="icon-box" style="margin-bottom:0;">📐</div>
+        <div>
+          <h4>Rigorous quality standards</h4>
+          <p>Our work is reviewed against the highest standards before it reaches a client. Accuracy, coherence, and strategic alignment are non-negotiable.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="icon-box" style="margin-bottom:0;">🤝</div>
+        <div>
+          <h4>Trusted, responsive partnership</h4>
+          <p>We work as an extension of your team — accessible, communicative, and invested in the success of your mandate, not just the contract.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="icon-box" style="margin-bottom:0;">🇨🇦</div>
+        <div>
+          <h4>Built for the Canadian public sector</h4>
+          <p>Deep fluency in GC procurement, Treasury Board policy, and federal regulatory frameworks means we hit the ground running on every file.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTORS -->
+<section>
+  <p class="section-label">Who We Serve</p>
+  <h2>Across federal government.</h2>
+  <p class="section-intro">Arctive works with departments and agencies at every level of the Government of Canada — from central agencies to program delivery teams.</p>
+  <div class="sectors-grid">
+    <div class="sector-card"><span class="si">🏛️</span><h4>Treasury Board Secretariat</h4></div>
+    <div class="sector-card"><span class="si">🌐</span><h4>Shared Services Canada</h4></div>
+    <div class="sector-card"><span class="si">🏥</span><h4>Health Canada</h4></div>
+    <div class="sector-card"><span class="si">🌿</span><h4>Environment & Climate Change</h4></div>
+    <div class="sector-card"><span class="si">📊</span><h4>Innovation, Science & Economic Dev.</h4></div>
+    <div class="sector-card"><span class="si">🛡️</span><h4>Public Safety Canada</h4></div>
+    <div class="sector-card"><span class="si">🎓</span><h4>Employment & Social Development</h4></div>
+    <div class="sector-card"><span class="si">🔬</span><h4>National Research Council</h4></div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <p class="section-label">Let's Work Together</p>
+  <h2>Ready to discuss your next engagement?</h2>
+  <p>Whether you have an active procurement or want to explore how Arctive can support your mandate, we're ready to help.</p>
+  <div class="cta-actions">
+    <a href="contact/index.html" class="btn-primary">Contact Us</a>
+    <a href="services/index.html" class="btn-outline">Explore Services</a>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="logo">Arctive<span>.</span></a>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="services/index.html">Services</a>
+    <a href="about/index.html">About</a>
+    <a href="contact/index.html">Contact</a>
+  </div>
+  <span class="footer-legal">© 2026 Arctive Consulting Inc. Hamilton, Ontario, Canada</span>
+</footer>
+
+</body>
+</html>

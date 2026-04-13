@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Arctive Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.about-intro {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 6rem; align-items: start;
+}
+@media (max-width: 900px) { .about-intro { grid-template-columns: 1fr; gap: 2.5rem; } }
+.about-intro .lead {
+  font-size: 1.15rem; color: var(--text-secondary);
+  font-weight: 300; line-height: 1.9; margin-bottom: 2rem;
+}
+.about-aside {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+.aside-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+}
+.aside-card h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.875rem; font-weight: 600;
+  color: var(--electric); margin-bottom: 0.4rem;
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem;
+}
+.aside-card p { font-size: 0.875rem; color: var(--text-secondary); font-weight: 300; line-height: 1.65; }
+
+.values-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.value-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+.value-card .vi {
+  font-size: 1.6rem; display: block; margin-bottom: 1rem;
+}
+.value-card h3 { font-size: 1rem; margin-bottom: 0.6rem; }
+.value-card p { font-size: 0.875rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; }
+
+.credentials-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.cred-item {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.cred-check {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--electric-dim);
+  border: 1px solid var(--card-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; color: var(--electric); flex-shrink: 0;
+}
+.cred-item span { font-size: 0.875rem; font-weight: 400; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Arctive<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../services/index.html">Services</a></li>
+    <li><a href="index.html" class="active">About</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+  </ul>
+  <a href="../contact/index.html" class="nav-cta">Get in Touch</a>
+</nav>
+
+<div class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="orb" style="right:0;top:-10%;width:560px;height:560px;"></div>
+  <div style="position:relative;z-index:1;">
+    <p class="section-label">Who We Are</p>
+    <h1 style="max-width:680px;">A consulting firm built<br><span class="accent">for government work.</span></h1>
+  </div>
+</div>
+
+<!-- ABOUT INTRO -->
+<section>
+  <div class="about-intro">
+    <div>
+      <p class="lead">Arctive Consulting is a Canadian advisory firm specializing in the federal public sector. We were founded on a simple premise: that government departments deserve consulting partners who understand their world — the procurement rules, the policy frameworks, the accountability structures, and the genuine complexity of delivering in the public interest.</p>
+      <p style="font-size:1rem;color:var(--text-secondary);font-weight:300;line-height:1.85;margin-bottom:1.5rem;">Our team brings hands-on experience across the full spectrum of federal advisory work — from technology strategy and IT procurement to policy development, organizational transformation, and public communications. We've worked across departments and agencies, at headquarters and in the regions, on flagship programs and on the detailed operational work that makes those programs run.</p>
+      <p style="font-size:1rem;color:var(--text-secondary);font-weight:300;line-height:1.85;">We're based in Hamilton, Ontario, and operate as a fully Canadian-owned and operated company — positioned to meet Buy Canadian requirements and committed to building Canadian capacity in public sector consulting.</p>
+    </div>
+    <div class="about-aside">
+      <div class="aside-card">
+        <h4>Established</h4>
+        <p>Arctive Consulting Inc. is incorporated in Ontario, Canada, with a mandate focused entirely on federal public sector advisory services.</p>
+      </div>
+      <div class="aside-card">
+        <h4>Location</h4>
+        <p>Hamilton, Ontario — with the capacity to work on-site across the National Capital Region and federal offices nationwide.</p>
+      </div>
+      <div class="aside-card">
+        <h4>Procurement Registration</h4>
+        <p>Registered on SAP Business Network (CanadaBuys), ProServices, and TBIPS/SBIPS supply arrangements. Procurement Business Number (PBN) issued.</p>
+      </div>
+      <div class="aside-card">
+        <h4>Languages</h4>
+        <p>Consulting services delivered in both official languages. English and French deliverables available for all practice areas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VALUES -->
+<section>
+  <p class="section-label">Our Principles</p>
+  <h2>What we stand for.</h2>
+  <p class="section-intro">Four commitments that shape how we approach every engagement — from the first conversation to final delivery.</p>
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="vi">🎯</span>
+      <h3>Outcomes over activity</h3>
+      <p>We measure success by what clients can do with our work — not by hours billed or pages produced. Every deliverable is designed to be used, not filed.</p>
+    </div>
+    <div class="value-card">
+      <span class="vi">📐</span>
+      <h3>Uncompromising quality</h3>
+      <p>Our work is reviewed against a high bar before it reaches a client. Accuracy, coherence, and strategic alignment are non-negotiable — always.</p>
+    </div>
+    <div class="value-card">
+      <span class="vi">🤝</span>
+      <h3>Genuine partnership</h3>
+      <p>We work alongside our clients, not at arm's length. That means being accessible, responsive, and invested in the success of the mandate — not just the contract.</p>
+    </div>
+    <div class="value-card">
+      <span class="vi">🔎</span>
+      <h3>Intellectual rigour</h3>
+      <p>We bring critical thinking to every file. That means questioning assumptions, stress-testing recommendations, and ensuring that our advice reflects the best available evidence.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CREDENTIALS -->
+<section>
+  <p class="section-label">Supplier Credentials</p>
+  <h2>Ready to work with you.</h2>
+  <p class="section-intro">Arctive holds the registrations and designations required to bid on, and win, Government of Canada contracts across a wide range of procurement vehicles.</p>
+  <div class="credentials-list">
+    <div class="cred-item"><div class="cred-check">✓</div><span>SAP Business Network (CanadaBuys) registered</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>Procurement Business Number (PBN) issued</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>TBIPS supply arrangement qualified</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>SBIPS supply arrangement qualified</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>ProServices pre-qualified</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>Reliability Status eligible (personnel)</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>Buy Canadian Policy compliant (Canadian-owned)</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>Federal Contractors Program compliant</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>MERX and Biddingo registered supplier</span></div>
+    <div class="cred-item"><div class="cred-check">✓</div><span>Bilingual service delivery (EN/FR)</span></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,var(--navy-mid),var(--navy-light));border-top:0.5px solid rgba(0,200,240,0.12);text-align:center;">
+  <p class="section-label">Work With Us</p>
+  <h2>Let's build something together.</h2>
+  <p style="color:var(--text-secondary);font-size:1.05rem;font-weight:300;max-width:480px;margin:0 auto 2.5rem;line-height:1.8;">Whether you have a specific procurement or want to explore how Arctive fits your mandate, we'd like to hear from you.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="../contact/index.html" class="btn-primary">Contact Us</a>
+    <a href="../services/index.html" class="btn-outline">Our Services</a>
+  </div>
+</section>
+
+<footer>
+  <a href="../index.html" class="logo">Arctive<span>.</span></a>
+  <div class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="../services/index.html">Services</a>
+    <a href="index.html">About</a>
+    <a href="../contact/index.html">Contact</a>
+  </div>
+  <span class="footer-legal">© 2026 Arctive Consulting Inc. Hamilton, Ontario, Canada</span>
+</footer>
+</body>
+</html>
